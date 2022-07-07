@@ -1,37 +1,44 @@
 {
-  "name": "project_template",
+  "name": "react-typescript-redux-webpack-template",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A minimal, barebones React TypeScript & Redux with Webpack boilerplate application",
+  "main": "index.html",
   "scripts": {
-    "start": "parcel ./src/index.html --open",
-    "lint:html": "linthtml ./src/index.html",
-    "lint:css": "stylelint **/*.scss",
-    "lint:js": "eslint ./src",
-    "lint": "concurrently \"npm run lint:html\" \"npm run lint:css\" \"npm run lint:js\"",
+    "build": "npx webpack --mode production",
+    "lint": "npx tslint --project tsconfig.json",
+    "start": "npx webpack-dev-server --mode development --open --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Omar Khan (khancode)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.8.5",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "@types/react-redux": "^7.1.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kitaminary/project_template.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/kitaminary/project_template/issues"
   },
-  "homepage": "https://github.com/kitaminary/project_template#readme",
-  "devDependencies": {
-    "@linthtml/linthtml": "^0.8.6",
-    "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "@typescript-eslint/parser": "^5.30.5",
-    "concurrently": "^7.2.2",
-    "eslint": "^8.19.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "parcel": "^1.12.3",
-    "stylelint": "^14.9.1",
-    "stylelint-config-standard-scss": "^4.0.0"
-  }
+  "homepage": "https://github.com/kitaminary/project_template#readme"
 }
