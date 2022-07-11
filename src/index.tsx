@@ -1,13 +1,11 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import rootReducer from './reducers/index';
-import { App } from './components/App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.scss';
+import { App } from './App';
 
 ReactDOM.render(
-   <Provider store={createStore(rootReducer)}>
-      <App compiler="TypeScript" framework="React" stateContainer="Redux" />
-   </Provider>,
-   document.getElementById('root'),
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root'),
 );

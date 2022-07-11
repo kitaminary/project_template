@@ -1,44 +1,53 @@
 {
-  "name": "react-typescript-redux-webpack-template",
-  "version": "1.0.0",
-  "description": "A minimal, barebones React TypeScript & Redux with Webpack boilerplate application",
-  "main": "index.html",
-  "scripts": {
-    "build": "npx webpack --mode production",
-    "lint": "npx tslint --project tsconfig.json",
-    "start": "npx webpack-dev-server --mode development --open --hot",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Omar Khan (khancode)",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.8.5",
-    "css-loader": "^3.2.0",
-    "html-webpack-plugin": "^3.2.0",
-    "source-map-loader": "^0.2.4",
-    "style-loader": "^1.0.0",
-    "ts-loader": "^6.0.4",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0"
-  },
+  "homepage": ".",
+  "name": "react-typescript-starter-pack",
+  "version": "0.1.0",
   "dependencies": {
-    "@types/react-redux": "^7.1.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-redux": "^7.1.0",
-    "redux": "^4.0.4"
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^12.20.10",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.2.4",
+    "typescript-eslint-parser": "^22.0.0",
+    "web-vitals": "^1.1.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kitaminary/project_template.git"
+  "scripts": {
+    "lint": "eslint ./src --fix",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "bugs": {
-    "url": "https://github.com/kitaminary/project_template/issues"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "homepage": "https://github.com/kitaminary/project_template#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@mate-academy/eslint-config-react-typescript": "^0.0.4",
+    "eslint": "^7.25.0",
+    "gh-pages": "^3.1.0",
+    "node-sass": "^5.0.0"
+  }
 }
